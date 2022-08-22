@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Dirt&display=swap');
+
+.headline{
+    font-family: 'Rubik Dirt', cursive;
+}
+
+.max-w264{
+    max-width: 100%;
+}
+.min-w264{
+    max-width: 100%;
+}
+
+.card-btn{
+    width: 80%;
+    padding: 2%;
+    margin-bottom: 5%;
+    background-color: #015196;
+}
+.calculate-btn{
+    width: 100%;
+    padding: 0.8rem 1rem;
+    margin-bottom: 5%;
+    background-color: #015196;
+}
+

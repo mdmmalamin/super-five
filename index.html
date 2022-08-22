@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select Your Super Five</title>
+    <!-- my css style -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-zinc-900 text-white">
+    <header>
+        <h1 class="headline text-6xl text-center">Select Your Super <span>Five</span></h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo vel itaque earum ipsum explicabo sequi dolorem at voluptates commodi asperiores illum magni, sapiente quis culpa quos modi repellat recusandae non? Non illum vel nobis commodi quos unde!</p>
+    </header>
+    <main class="grid md:grid-cols-3 lg:grid-cols-4 justify-between w-4/5 mx-auto mt-24 gap-8">
+        <!-- Player Selection Card -->
+        <section class="col-span-3 grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="w-full rounded border border-gray-600 bg-black">
+                <div>
+                    <img class="rounded-t" src="images/player-1.png" alt="Lionel Messi">
+                </div>
+                <div class="text-center">
+                    <h3 class="font-semibold text-2xl py-1">Lionel Messi</h3>
+                    <p class="font-thin pb-3 text-gray-400">36 Goals | 120 Assist</p>
+                    <button class="card-btn uppercase hover:bg-indigo-800 text-lg font-semibold">Select</button>
+                </div>
+            </div>
+            <div class="w-full rounded border border-gray-600 bg-black">
+                <div>
+                    <img class="rounded-t" src="images/player-2.png" alt="Lionel Messi">
+                </div>
+                <div class="text-center">
+                    <h3 class="font-semibold text-2xl py-1">Neymar Jr</h3>
+                    <p class="font-thin pb-3 text-gray-400">36 Goals | 120 Assist</p>
+                    <button class="card-btn uppercase hover:bg-indigo-800 text-lg font-semibold">Select</button>
+                </div>
+            </div>
+            <div class="w-full rounded border border-gray-600 bg-black">
+                <div>
+                    <img class="rounded-t" src="images/player-3.png" alt="Lionel Messi">
+                </div>
+                <div class="text-center">
+                    <h3 class="font-semibold text-2xl py-1">Kylian Mbappé</h3>
+                    <p class="font-thin pb-3 text-gray-400">36 Goals | 120 Assist</p>
+                    <button class="card-btn uppercase hover:bg-indigo-800 text-lg font-semibold">Select</button>
+                </div>
+            </div>
+            <div class="w-full rounded border border-gray-600 bg-black">
+                <div>
+                    <img class="rounded-t" src="images/player-4.png" alt="Lionel Messi">
+                </div>
+                <div class="text-center">
+                    <h3 class="font-semibold text-2xl py-1">Cristiano Ronaldo</h3>
+                    <p class="font-thin pb-3 text-gray-400">36 Goals | 120 Assist</p>
+                    <button class="card-btn uppercase hover:bg-indigo-800 text-lg font-semibold">Select</button>
+                </div>
+            </div>
+            <div class="w-full rounded border border-gray-600 bg-black">
+                <div>
+                    <img class="rounded-t" src="images/player-5.png" alt="Lionel Messi">
+                </div>
+                <div class="text-center">
+                    <h3 class="font-semibold text-2xl py-1">Sergio Ramos</h3>
+                    <p class="font-thin pb-3 text-gray-400">36 Goals | 120 Assist</p>
+                    <button class="card-btn uppercase hover:bg-indigo-800 text-lg font-semibold">Select</button>
+                </div>
+            </div>
+            <div class="w-full rounded border border-gray-600 bg-black">
+                <div>
+                    <img class="rounded-t" src="images/player-6.png" alt="Lionel Messi">
+                </div>
+                <div class="text-center">
+                    <h3 class="font-semibold text-2xl py-1">Renato Sanches</h3>
+                    <p class="font-thin pb-3 text-gray-400">36 Goals | 120 Assist</p>
+                    <button class="card-btn uppercase hover:bg-indigo-800 text-lg font-semibold">Select</button>
+                </div>
+            </div>
+        </section>
+        <!-- aside section - selected - 5 & budget calculate -->
+        <aside class="grid grid-cols-1 gap-8">
+            <!-- Selection 5 players -->
+            <div class="w-full bg-black p-4">
+                <h2 class="font-semibold text-2xl text-center">Selected-V</h2>
+                <ol class="py-4 text-lg leading-10">
+                    <li>1. Lionel Messi</li>
+                    <li>2. Lionel Messi</li>
+                    <li>3. Lionel Messi</li>
+                    <li>4. Lionel Messi</li>
+                    <li>5. Lionel Messi</li>
+                </ol>
+            </div>
+            <!-- Budget calculate -->
+            <div class="w-full bg-black p-4">
+                <h2 class="font-semibold text-2xl text-center">Budget</h2>
+                <div class="flex flex-row justify-between py-2">
+                    <label class="text-lg text-gray-400" for="">Per Player</label>
+                    <input class="text-lg w-1/2 px-2 py-1 border border-white bg-black" type="text">
+                </div>
+                <button class="calculate-btn hover:bg-indigo-800 my-4 text-center">Calculate</button>
+                <div class="flex flex-row justify-between py-2">
+                    <span class="text-gray-400">Player Expenses</span> <span>$<span>5000</span></span>
+                </div>
+                <div class="flex flex-row justify-between py-2">
+                    <label class="text-lg text-gray-400" for="">Manager</label>
+                    <input class="text-lg w-1/2 px-2 py-1 border border-white bg-black" type="text">
+                </div>
+                <div class="flex flex-row justify-between">
+                    <label class="text-lg text-gray-400" for="">Coach</label>
+                    <input class="text-lg w-1/2 px-2 py-1 border border-white bg-black" type="text">
+                </div>
+                <button class="calculate-btn hover:bg-indigo-800 my-4 text-center">Calculate Total</button>
+                <div class="flex flex-row justify-between">
+                    <span class="text-gray-400">Total</span> <span class="text-orange-500">$<span class="text-orange-500">5000</span></span>
+                </div>
+            </div>
+        </aside>
+    </main>
+    <footer class="my-20 text-center text-gray-300">
+        <hr>
+        <p class="my-10">Copyright @ 2022 All Rights Reserved.</p>
+    </footer>
+
+    <!-- JavaScript link -->
+    <script src="app/underline.js"></script>
+</body>
+</html>
