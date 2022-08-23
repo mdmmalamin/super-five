@@ -3,14 +3,14 @@ function getAmountById(amountId) {
     const amountById = document.getElementById(amountId);
     const amountString = amountById.value;
     const amount = parseInt(amountString);
-    
+
     return amount;
 }
 
 // get player budget
 function playerBudget() {
     const perPlayerBudget = getAmountById('player-budget');
-    const playerTotalBudget = perPlayerBudget * 5;
+    const playerTotalBudget = perPlayerBudget * addListCount();
     const playerExpenses = document.getElementById('player-exp');
     playerExpenses.innerText = playerTotalBudget;
 

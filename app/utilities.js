@@ -19,21 +19,28 @@ function disableButton(cardBtn) {
     button.disabled = true;
     button.style.backgroundColor = 'gray';
 }
-// add list
+// add list player name
 function addList(cardBtnId) {
     const listContainer = document.getElementById('selected-list');
     const list = listContainer.children.length;
-    console.log(list)
+    
     if (list <= 4) {
         const li = document.createElement('li');
         li.innerText = playerCardName(cardBtnId);
         // li.classList.add('');
         listContainer.appendChild(li);
-
         disableButton(cardBtnId); // Disabled Button
     }
     else{
         alert('Five Hero Selected.');
     }
-    return list;
+    
+}
+
+// add list count
+function addListCount(){
+    const listContainer = document.getElementById('selected-list');
+    const listItem = listContainer.children.length;
+    console.log(listItem);
+    return listItem;
 }
