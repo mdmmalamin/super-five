@@ -144,8 +144,9 @@
         <aside class="flex flex-col gap-8">
             <!-- Selection 5 players -->
             <div class="w-full bg-black p-4">
-                <h2 class="font-semibold text-2xl text-center">Selected-V</h2>
-                <ol id="selected-list" class="py-4 text-lg leading-10">
+                <h2 class="font-semibold text-3xl text-center">Selected-V</h2>
+                <img class="mx-auto py-2" src="images/underline.png" alt="underline">
+                <ol id="selected-list" class="list-decimal pl-4 text-lg font-medium py-4 text-lg leading-10">
                     <!-- <li>1. Lionel Messi</li>
                     <li>2. Lionel Messi</li>
                     <li>3. Lionel Messi</li>
@@ -155,26 +156,27 @@
             </div>
             <!-- Budget calculate -->
             <div class="w-full bg-black p-4">
-                <h2 class="font-semibold text-2xl text-center">Budget</h2>
+                <h2 class="font-semibold text-3xl text-center">Budget</h2>
+                <img class="mx-auto py-2" src="images/underline.png" alt="underline">
                 <div class="flex flex-row justify-between pt-4 pb-2">
                     <label class="text-lg text-gray-400" for="">Per Player</label>
-                    <input class="text-lg w-1/2 px-2 py-1 border border-white bg-black" type="text">
+                    <input id="player-budget" class="text-lg w-1/2 px-2 py-1 border border-white bg-black" type="text">
                 </div>
-                <button class="calculate-btn hover:bg-indigo-800 my-4 text-center">Calculate</button>
+                <button id="btn-calculate" class="calculate-btn hover:bg-indigo-800 my-4 text-center">Calculate</button>
                 <div class="flex flex-row justify-between py-2">
-                    <span class="text-gray-400">Player Expenses</span> <span>$<span>5000</span></span>
+                    <span class="text-gray-400">Player Expenses</span> <span>$<span id="player-exp">00</span></span>
                 </div>
                 <div class="flex flex-row justify-between py-2">
                     <label class="text-lg text-gray-400" for="">Manager</label>
-                    <input class="text-lg w-1/2 px-2 py-1 border border-white bg-black" type="text">
+                    <input id="manager-budget" class="text-lg w-1/2 px-2 py-1 border border-white bg-black" type="text">
                 </div>
                 <div class="flex flex-row justify-between">
                     <label class="text-lg text-gray-400" for="">Coach</label>
-                    <input class="text-lg w-1/2 px-2 py-1 border border-white bg-black" type="text">
+                    <input id="coach-budget" class="text-lg w-1/2 px-2 py-1 border border-white bg-black" type="text">
                 </div>
-                <button class="calculate-btn hover:bg-indigo-800 my-4 text-center">Calculate Total</button>
+                <button id="btn-calculate-total" class="calculate-btn hover:bg-indigo-800 my-4 text-center">Calculate Total</button>
                 <div class="flex flex-row justify-between">
-                    <span class="text-gray-400">Total</span> <span class="text-orange-500">$<span class="text-orange-500">5000</span></span>
+                    <span class="text-gray-400">Total</span> <span class="text-orange-500">$<span id="total-exp" class="text-orange-500">00</span></span>
                 </div>
             </div>
         </aside>
@@ -187,5 +189,6 @@
     <!-- JavaScript link -->
     <script src="app/utilities.js"></script>
     <script src="app/selectedPlayer.js"></script>
+    <script src="app/budget.js"></script>
 </body>
 </html>
