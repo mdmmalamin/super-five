@@ -5,19 +5,26 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Select Your Super Five Hero</title>
-    <!-- my css style -->
+    <!----------------------------------------------------
+        my css style
+    ----------------------------------------------------->
     <link rel="stylesheet" href="style.css">
 
-    <!-- Tailwind CSS CDN -->
+    <!----------------------------------------------------
+        Tailwind CSS CDN
+    ----------------------------------------------------->
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-zinc-900 text-white">
-    <header>
-        <h1 class="headline text-6xl text-center">Select Your Super Five <span>Hero</span></h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo vel itaque earum ipsum explicabo sequi dolorem at voluptates commodi asperiores illum magni, sapiente quis culpa quos modi repellat recusandae non? Non illum vel nobis commodi quos unde!</p>
+    <header class="w-full h-3/4 bg-black pt-64">
+        <h1 class="headline text-7xl text-center  text-orange-500 mx-auto">Select Your Super Five <span>Hero</span></h1>
+        <p class="py-8 px-96 mx-32 text-center">As we count down to the start of the global showpiece in Qatar on 20 November, FIFA+ is showcasing 100 of the greatest moments in FIFA World Cup history.</p>
+        <img src="images/banner-left.png" alt="">
     </header>
     <main class="grid md:grid-cols-3 lg:grid-cols-4 justify-between w-4/5 mx-auto mt-24 gap-8">
-        <!-- Player Selection Card -->
+        <!------------------------------------------------------------------
+            Player Selection Card
+        -------------------------------------------------------------------->
         <section id="players-card" class="md:col-span-2 lg:col-span-3 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div class="w-full rounded border border-gray-600 bg-black">
                 <div>
@@ -140,9 +147,13 @@
                 </div>
             </div>
         </section>
-        <!-- aside section - selected - 5 & budget calculate -->
+        <!-----------------------------------------------------------------------
+            aside section - selected - 5 & budget calculate
+        ------------------------------------------------------------------------->
         <aside class="flex flex-col gap-8">
-            <!-- Selection 5 players -->
+            <!--------------------------------------------------
+                Selection 5 players
+            --------------------------------------------------->
             <div class="w-full bg-black p-4">
                 <h2 class="font-semibold text-3xl text-center">Selected-V</h2>
                 <img class="mx-auto py-2" src="images/underline.png" alt="underline">
@@ -154,7 +165,9 @@
                     <li>5. Lionel Messi</li> -->
                 </ol>
             </div>
-            <!-- Budget calculate -->
+            <!------------------------------------------------
+                Budget calculate
+            -------------------------------------------------->
             <div class="w-full bg-black p-4">
                 <h2 class="font-semibold text-3xl text-center">Budget</h2>
                 <img class="mx-auto py-2" src="images/underline.png" alt="underline">
@@ -186,7 +199,9 @@
         <p class="my-10">Copyright @ 2022 All Rights Reserved.</p>
     </footer>
 
-    <!-- JavaScript link -->
+    <!-----------------------------------------------
+        JavaScript link
+    ------------------------------------------------->
     <script src="app/utilities.js"></script>
     <script src="app/selectedPlayer.js"></script>
     <script src="app/budget.js"></script>

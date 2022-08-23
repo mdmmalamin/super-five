@@ -1,46 +1,77 @@
-// Player Select button
-const allPlayerName = [];
-
-function playerCardName(selectBtn) {
-    const btn = document.getElementById(selectBtn);
-    const playerName = btn.parentNode.children[0].innerText;
+/*  ==============================================
+    Click player SELECT button for get player name
+    ============================================== */
+function getPlayerName(selectBtnId) {
+    const selectBtn = document.getElementById(selectBtnId);
+    const playerName = selectBtn.parentNode.children[0].innerText;
 
     return playerName;
 }
 
+/*  ====================================================
+    Click player SELECT button for get player button Id
+    ==================================================== */
 function addToPlayer(playerBtnId) {
     const clickbtn = document.getElementById(playerBtnId);
     return clickbtn;
 }
 
-// Disabled Button
+/*  ======================================
+    Disabled Button
+    ====================================== */
 function disableButton(cardBtn) {
     const button = document.getElementById(cardBtn);
     button.disabled = true;
     button.style.backgroundColor = 'gray';
 }
-// add list player name
-function addList(cardBtnId) {
+
+/*  ======================================
+    add list item & set player name
+    ====================================== */
+function addListItem(cardBtnId) {
     const listContainer = document.getElementById('selected-list');
     const list = listContainer.children.length;
-    
+
     if (list <= 4) {
-        const li = document.createElement('li');
-        li.innerText = playerCardName(cardBtnId);
-        // li.classList.add('');
-        listContainer.appendChild(li);
+        const liCreate = document.createElement('li');
+        liCreate.innerText = getPlayerName(cardBtnId);
+        listContainer.appendChild(liCreate);
         disableButton(cardBtnId); // Disabled Button
+    } else {
+        alert('Super Five Hero Selected.');
     }
-    else{
-        alert('Five Hero Selected.');
-    }
-    
 }
 
-// add list count
-function addListCount(){
+/*  ======================================
+    list Item count
+    ====================================== */
+function ListCount() {
     const listContainer = document.getElementById('selected-list');
     const listItem = listContainer.children.length;
     console.log(listItem);
     return listItem;
+}
+
+/*  ==============================================
+    get amount on input field
+    ============================================== */
+function getAmountById(amountId) {
+    const amountById = document.getElementById(amountId);
+    const amountString = amountById.value;
+    const amount = parseInt(amountString);
+
+    return amount;
+}
+
+/*  ==============================================
+    get player total budget
+    ============================================== */
+function playerBudget() {
+    const perPlayerBudget = getAmountById('player-budget');
+    const playerTotalBudget = perPlayerBudget * ListCount();
+
+    const playerExpenses = document.getElementById('player-exp');
+    playerExpenses.innerText = playerTotalBudget;
+
+    return playerTotalBudget;
 }

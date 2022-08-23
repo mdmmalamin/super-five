@@ -1,44 +1,21 @@
-// get amount
-function getAmountById(amountId) {
-    const amountById = document.getElementById(amountId);
-    const amountString = amountById.value;
-    const amount = parseInt(amountString);
-
-    return amount;
-}
-
-// get player budget
-function playerBudget() {
-    const perPlayerBudget = getAmountById('player-budget');
-    const playerTotalBudget = perPlayerBudget * addListCount();
-    const playerExpenses = document.getElementById('player-exp');
-    playerExpenses.innerText = playerTotalBudget;
-
-    return playerTotalBudget;
-}
-
-// Calculate Selected Player Budget 
-document.getElementById('btn-calculate').addEventListener('click', function () {
-    const perPlayerBudget = getAmountById('player-budget');
-
-    if (isNaN(perPlayerBudget)) {
-        alert('Enter a valid Amount!');
+/*  ==============================================
+    Calculate Selected Player Budget
+    ============================================== */ 
+document.getElementById('btn-calculate').addEventListener('click', function() {
+    const perPlayerCost = getAmountById('player-budget');
+    if (isNaN(perPlayerCost)){
+        alert('Enter a valid Amount for per player!');
         return;
     }
-
     playerBudget();
-    
-    // const playerTotalBudget = perPlayerBudget * 5;
-    // const playerExpenses = document.getElementById('player-exp');
-    // playerExpenses.innerText = playerTotalBudget;
-    // return playerTotalBudget;
 });
 
-// Calculate Total Budget 
-document.getElementById('btn-calculate-total').addEventListener('click', function () {
+/*  ==============================================
+    Calculate Total Budget 
+    ============================================== */
+document.getElementById('btn-calculate-total').addEventListener('click', function() {
     const managerCost = getAmountById('manager-budget');
     const coachCost = getAmountById('coach-budget');
-
     if (isNaN(managerCost)) {
         alert('Enter a valid amount for manager!');
         return;
